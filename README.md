@@ -54,13 +54,34 @@ Proyek ini mengikuti tahapan standar data science sebagai berikut:
 ## 5. Business Dashboard
 Dashboard dibuat menggunakan **Metabase** untuk memudahkan pihak institusi dalam memahami data dan memonitor performa mahasiswa.
 
-**Akses Dashboard (untuk reviewer):**
+**Akses Dashboard:**
 - Email: `root@mail.com`
 - Password: `root123`
 
 File database Metabase disertakan dalam submission:
 ```
 metabase.db.mv.db
+```
+
+**Cara menjalankan Metabase secara lokal menggunakan Docker di OS Windows, melalui Command Prompt:**
+### 5.1 Ekstrak file zip submission
+```bash
+tar -xf submission-jayainstitut-ekoandriprasetyo.zip -C C:\
+```
+
+### 5.2 Pindah folder
+```bash
+cd c:\submission
+```
+
+### 5.3 Jalankan Docker metabase
+```bash
+docker run -d --name jayainstitut -p 3000:3000 -v C:\submission\dashboard\students.db:/data/students.db metabase/metabase:v0.57.3
+```
+
+### 5.4 Jalankan browser dan buka URL :
+```bash
+http://localhost:3000/dashboard/2-jaya-jaya-institute-students-dropout-analysis
 ```
 
 ---
@@ -127,7 +148,7 @@ Apabila aplikasi tidak dapat diakses sementara karena batasan fair-use Streamlit
 ---
 
 ## 10. Kesimpulan
-Proyek ini berhasil membangun solusi data science end-to-end yang mencakup analisis data, dashboard, model machine learning, serta prototype aplikasi yang siap digunakan oleh user. Seluruh kriteria submission Dicoding telah terpenuhi.
+Proyek ini berhasil membangun solusi data science end-to-end yang mencakup analisis data, dashboard, model machine learning, serta prototype aplikasi yang siap digunakan oleh user.
 
 ---
 
@@ -135,7 +156,11 @@ Proyek ini berhasil membangun solusi data science end-to-end yang mencakup anali
 ```
 submission/
 ├── model/
+    ├── model.joblib
+    ├── metrics.json
+    ├── schema.json
 ├── notebook.ipynb
+├── notebook.py
 ├── app.py
 ├── README.md
 ├── requirements.txt
@@ -146,4 +171,4 @@ submission/
 ---
 
 **Catatan:**  
-Proyek ini dibuat untuk keperluan pembelajaran dan mengikuti seluruh ketentuan Dicoding.
+Proyek ini dibuat untuk keperluan pembelajaran dan mengikuti seluruh ketentuan submission Dicoding.
