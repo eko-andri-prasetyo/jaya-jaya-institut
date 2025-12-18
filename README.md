@@ -182,9 +182,9 @@ a. buat folder submission
 ```bash
 mkdir C:\submission
 ```
-b. ekstrak file submission-jayainstitut-ekoandriprasetyo.zip ke C:\
+b. ekstrak file submission-jayainstitut-ekoandriprasetyo.zip ke C:\submission
 ```bash
-tar -xf submission-jayainstitut-ekoandriprasetyo.zip -C C:\
+tar -xf submission-jayainstitut-ekoandriprasetyo.zip -C C:\submission
 ```
 c. buka command prompt, ketikkan perintah
 ```bash
