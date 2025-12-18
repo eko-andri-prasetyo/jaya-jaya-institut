@@ -76,7 +76,7 @@ cd c:\submission
 
 ### 5.3 Jalankan Docker metabase
 ```bash
-docker run -d --name jayainstitut -p 3000:3000 -v C:\submission\dashboard\students.db:/data/students.db metabase/metabase:v0.57.3
+docker run -d --name jayainstitut -p 3000:3000 -v c:/submission:/metabase.db -v c:/submission/students.db:/data/students.db -e MB_DB_FILE=/metabase.db/metabase.db metabase/metabase
 ```
 
 ### 5.4 Jalankan browser dan buka URL :
