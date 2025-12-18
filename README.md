@@ -104,7 +104,7 @@ Fitur pada prototype:
 4. Tempel link deploy Anda di sini:
 
 **Link Streamlit Cloud:** _(isi sendiri setelah deploy)_  
-`https://<nama-app-anda>.streamlit.app`
+`https://jaya-jaya-institut-ekoandriprasetyo.streamlit.app`
 
 ---
 
@@ -117,10 +117,10 @@ Fitur pada prototype:
 
 ### 7.1 Jalankan Metabase (Docker)
 ```bash
-docker run -d --name metabase -p 3000:3000 metabase/metabase:v0.57.3
+docker run -d --name jayainstitut -p 3000:3000 -v c:/submission:/metabase.db -v c:/submission/students.db:/data/students.db -e MB_DB_FILE=/metabase.db/metabase.db metabase/metabase
 ```
 
-Buka: http://localhost:3000
+Buka: [http://localhost:3000](http://localhost:3000/dashboard/2-jaya-jaya-institute-students-dropout-analysis)
 
 ### 7.2 Kredensial reviewer
 Gunakan (atau buat akun dengan):
