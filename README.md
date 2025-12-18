@@ -184,7 +184,7 @@ mkdir C:\submission
 ```
 b. ekstrak file submission-jayainstitut-ekoandriprasetyo.zip ke C:\
 ```bash
-tar -xf submission_final_ekoandriprasetyo.zip -C C:\
+tar -xf submission-jayainstitut-ekoandriprasetyo.zip -C C:\
 ```
 c. buka command prompt, ketikkan perintah
 ```bash
