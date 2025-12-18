@@ -178,19 +178,23 @@ Fitur pada prototype:
 
 
 ### 10.6 Business Dashboard (Metabase v0.57.3), jalankan Metabase via Docker
-a. ekstrak file submission-jayainstitut-ekoandriprasetyo.zip ke C:\
+a. buat folder submission
+```bash
+mkdir C:\submission
+```
+b. ekstrak file submission-jayainstitut-ekoandriprasetyo.zip ke C:\
 ```bash
 tar -xf submission_final_ekoandriprasetyo.zip -C C:\
 ```
-b. buka command prompt, ketikkan perintah
+c. buka command prompt, ketikkan perintah
 ```bash
 cd c:\submission
 ```
-c. jalankan metabase via docker
+d. jalankan metabase via docker
 ```bash
 docker run -d --name jayainstitut -p 3000:3000 -v c:/submission:/metabase.db -v c:/submission/students.db:/data/students.db -e MB_DB_FILE=/metabase.db/metabase.db metabase/metabase
 ```
-d. buka dashboard melalui URL
+e. buka dashboard melalui URL
 ```bash
 http://localhost:3000/dashboard/2-jaya-jaya-institute-students-dropout-analysis
 ```
