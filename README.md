@@ -1,4 +1,8 @@
 # Submission Akhir — Menyelesaikan Permasalahan Institusi Pendidikan (Jaya Jaya Institut)
+**Kelas:** Belajar Penerapan Data Science (Dicoding)  
+**Nama Institusi (Studi Kasus):** Jaya Jaya Institut  
+**Nama Peserta:** Eko Andri Prasetyo  
+**Username Dicoding:** ekoandriprasetyo  
 
 Repo/folder ini disusun agar memenuhi **5 kriteria wajib** pada submission:
 1) pakai template proyek,  
