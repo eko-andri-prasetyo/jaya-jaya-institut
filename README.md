@@ -27,7 +27,7 @@ Repo/folder ini disusun agar memenuhi **5 kriteria wajib** pada submission:
 Sumber data:  
 https://github.com/dicodingacademy/dicoding_dataset/blob/main/students_performance/data.csv
 
-Dalam proyek ini, file data sudah disalin ke: `data/data.csv` (separator `;`).
+Dalam proyek ini, file data sudah disalin ke: `data/data.csv`.
 
 ---
 
