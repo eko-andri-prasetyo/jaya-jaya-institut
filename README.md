@@ -1,174 +1,167 @@
-# Submission Akhir – Menyelesaikan Permasalahan Institusi Pendidikan
-**Kelas:** Belajar Penerapan Data Science (Dicoding)  
-**Nama Institusi (Studi Kasus):** Jaya Jaya Institut  
-**Nama Peserta:** Eko Andri Prasetyo  
-**Username Dicoding:** ekoandriprasetyo  
+# Submission Akhir — Menyelesaikan Permasalahan Institusi Pendidikan (Jaya Jaya Institut)
+
+Repo/folder ini disusun agar memenuhi **5 kriteria wajib** pada submission:
+1) pakai template proyek,  
+2) end-to-end proses data science,  
+3) minimal 1 dashboard,  
+4) minimal 1 solusi ML siap pakai (Streamlit) + deploy,  
+5) action items.
 
 ---
 
-## 1. Latar Belakang (Business Understanding)
-Jaya Jaya Institut merupakan institusi pendidikan tinggi yang telah beroperasi sejak tahun 2000 dan memiliki reputasi lulusan yang baik. Namun demikian, institusi ini menghadapi permasalahan serius berupa **tingginya angka mahasiswa dropout** (tidak menyelesaikan pendidikan).
+## 1. Business Understanding
 
-Tingginya tingkat dropout berdampak pada:
-- Penurunan reputasi institusi
-- Kerugian finansial
-- Tidak optimalnya proses pembelajaran
+**Masalah:** Jaya Jaya Institut memiliki angka **dropout** yang relatif tinggi.  
+**Tujuan:** mendeteksi sedini mungkin mahasiswa yang berpotensi **Dropout** sehingga institusi dapat melakukan intervensi/bimbingan.
 
-Oleh karena itu, Jaya Jaya Institut membutuhkan solusi berbasis data untuk **mendeteksi mahasiswa yang berpotensi dropout sedini mungkin**, sehingga dapat diberikan bimbingan atau intervensi yang tepat.
+**Target ML:** memprediksi kolom **`Status`** (kelas: `Dropout`, `Enrolled`, `Graduate`) berdasarkan fitur-fitur pendaftaran & performa akademik.
 
 ---
 
-## 2. Tujuan Proyek
-Tujuan dari proyek ini adalah:
-1. Menganalisis faktor-faktor yang memengaruhi status mahasiswa (Dropout, Enrolled, Graduate).
-2. Mengembangkan **model machine learning** untuk memprediksi status mahasiswa.
-3. Menyediakan **dashboard** untuk membantu institusi memonitor performa mahasiswa.
-4. Membangun **prototype aplikasi machine learning** yang siap digunakan oleh user.
-5. Memberikan **rekomendasi action items** berbasis hasil analisis.
+## 2. Dataset
 
----
-
-## 3. Dataset
-Dataset yang digunakan berasal dari Dicoding dan dapat diakses melalui tautan berikut:  
+Sumber data:  
 https://github.com/dicodingacademy/dicoding_dataset/blob/main/students_performance/data.csv
 
-Dataset berisi informasi demografis, akademik, dan sosial ekonomi mahasiswa, dengan target variabel **Status** yang terdiri dari:
-- Dropout
-- Enrolled
-- Graduate
+Dalam proyek ini, file data sudah disalin ke: `data/data.csv` (separator `;`).
 
 ---
 
-## 4. Tahapan Proyek Data Science
-Proyek ini mengikuti tahapan standar data science sebagai berikut:
+## 3. Struktur Folder
 
-1. Business Understanding  
-2. Data Understanding  
-3. Data Preparation  
-4. Modeling  
-5. Evaluation  
-6. Deployment  
-
----
-
-## 5. Business Dashboard
-Dashboard dibuat menggunakan **Metabase** untuk memudahkan pihak institusi dalam memahami data dan memonitor performa mahasiswa.
-
-**Akses Dashboard:**
-- Email: `root@mail.com`
-- Password: `root123`
-
-File database Metabase disertakan dalam submission:
 ```
-metabase.db.mv.db
-```
-
-**Cara menjalankan Metabase secara lokal menggunakan Docker di OS Windows, melalui Command Prompt:**
-### 5.1 Ekstrak file zip submission
-```bash
-tar -xf submission-jayainstitut-ekoandriprasetyo.zip -C C:\
-```
-
-### 5.2 Pindah folder
-```bash
-cd c:\submission
-```
-
-### 5.3 Jalankan Docker metabase
-```bash
-docker run -d --name jayainstitut -p 3000:3000 -v c:/submission:/metabase.db -v c:/submission/students.db:/data/students.db -e MB_DB_FILE=/metabase.db/metabase.db metabase/metabase
-```
-
-### 5.4 Jalankan browser dan buka URL :
-```bash
-http://localhost:3000/dashboard/2-jaya-jaya-institute-students-dropout-analysis
+submission/
+├── model/
+│   ├── model.joblib
+│   ├── schema.json
+│   └── metrics.json
+├── dashboard/
+│   └── students.db
+├── data/
+│   └── data.csv
+├── notebook.ipynb
+├── app.py
+└── requirements.txt
 ```
 
 ---
 
-## 6. Solusi Machine Learning (Prototype Streamlit)
-Prototype machine learning dikembangkan menggunakan **Streamlit** dan siap digunakan oleh user.
+## 4. Setup Environment (Local)
 
-**Fitur utama:**
-- Prediksi tunggal melalui form input
-- Prediksi batch melalui upload CSV
-- Dukungan delimiter `,` dan `;`
-- Penghapusan kolom `Status` secara otomatis
-- Hasil prediksi dapat diunduh
-
----
-
-## 7. Cara Menjalankan Prototype Secara Lokal
-
-### 7.1 Membuat Virtual Environment
-```bash
-python -m venv venv
+### 4.1 Buat dan aktifkan virtual env
+Windows PowerShell:
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
 ```
 
-### 7.2 Aktivasi Virtual Environment
+Mac/Linux:
 ```bash
-venv\Scripts\activate        # Windows
-source venv/bin/activate      # Linux / macOS
+python -m venv .venv
+source .venv/bin/activate
 ```
 
-### 7.3 Instalasi Dependensi
+### 4.2 Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 7.4 Menjalankan Aplikasi
+---
+
+## 5. Notebook (End-to-End Data Science)
+
+Buka dan jalankan `notebook.ipynb` dari awal sampai akhir.
+Notebook mencakup:
+- Business understanding (tujuan & KPI)
+- Load data + EDA
+- Preprocessing + training model multiclass
+- Evaluasi (accuracy, macro F1, confusion matrix)
+- Export model ke `model/model.joblib`
+- Pembuatan SQLite database untuk dashboard: `dashboard/students.db`
+
+---
+
+## 6. Prototype Machine Learning (Streamlit)
+
+### 6.1 Jalankan local
 ```bash
 streamlit run app.py
 ```
 
-Aplikasi dapat diakses melalui:
-```
-http://localhost:8501
-```
+Fitur pada prototype:
+- Prediksi 1 data (form sidebar)
+- Prediksi batch (upload CSV)
+- Menampilkan probabilitas per kelas
+
+### 6.2 Deploy ke Streamlit Community Cloud
+1. Push folder submission ini ke GitHub (public).
+2. Pastikan file `app.py`, `requirements.txt`, folder `model/` ikut ter-commit.
+3. Di Streamlit Community Cloud: pilih repo → pilih `app.py` → Deploy.
+4. Tempel link deploy Anda di sini:
+
+**Link Streamlit Cloud:** _(isi sendiri setelah deploy)_  
+`https://<nama-app-anda>.streamlit.app`
 
 ---
 
-## 8. Deployment ke Streamlit Community Cloud
-Prototype machine learning ini **telah berhasil dideploy ke Streamlit Community Cloud** dan dapat diakses secara remote.
+## 7. Business Dashboard (Metabase v0.57.3)
 
-🔗 **Link Prototype Streamlit (Cloud):**  
-https://jaya-jaya-institut-ekoandriprasetyo.streamlit.app/
+> **Penting:** File `metabase.db.mv.db` pada repo ini adalah *placeholder*. Anda **WAJIB** menggantinya dengan hasil export dari Metabase Anda sebelum submit.
+> Jalankan `python check_submission.py` untuk memastikan tidak ada file placeholder.
 
-Apabila aplikasi tidak dapat diakses sementara karena batasan fair-use Streamlit, prototype tetap dapat dijalankan secara lokal.
+> Untuk memenuhi kriteria 3, buat dashboard visual (bukan tabel saja).
+
+### 7.1 Jalankan Metabase (Docker)
+```bash
+docker run -d --name metabase -p 3000:3000 metabase/metabase:v0.57.3
+```
+
+Buka: http://localhost:3000
+
+### 7.2 Kredensial reviewer
+Gunakan (atau buat akun dengan):
+- Email: **root@mail.com**
+- Password: **root123**
+
+### 7.3 Hubungkan database ke Metabase
+Gunakan SQLite file: `dashboard/students.db`  
+Tabel utama: `students`
+
+### 7.4 Rekomendasi isi dashboard (minimal)
+- KPI: Total mahasiswa, Dropout rate, Graduate rate
+- Dropout rate by Course
+- Status by Debtor (0/1)
+- Status by Scholarship holder (0/1)
+- Distribusi Admission grade per Status
+- Performa semester 1/2 (enrolled/approved) vs Status
+
+### 7.5 Screenshot dashboard
+Simpan screenshot ke file:
+`ekoandriprasetyo-dashboard.png`
+
+### 7.6 Export database Metabase (metabase.db.mv.db)
+Setelah dashboard selesai dibuat, export DB metabase:
+```bash
+docker cp metabase:/metabase.db/metabase.db.mv.db ./
+```
+
+Lalu taruh file itu di folder submission (root): `metabase.db.mv.db`
+
+---
+
+## 8. Conclusion (ringkas)
+
+Model baseline multiclass (Logistic Regression + scaling) menghasilkan metrik (lihat `model/metrics.json`):
+- Accuracy: 0.7288
+- Macro F1: 0.6927
 
 ---
 
 ## 9. Action Items (Rekomendasi)
-1. Penerapan early warning system bagi mahasiswa berisiko dropout.
-2. Pendampingan akademik pada semester awal.
-3. Bantuan atau keringanan finansial bagi mahasiswa bermasalah.
-4. Monitoring berkala menggunakan dashboard.
-5. Evaluasi program studi dengan dropout rate tinggi.
 
----
+1. **Early warning system**: lakukan monitoring rutin mahasiswa dengan probabilitas `Dropout` tinggi, prioritas konseling akademik & psikologis.
+2. **Intervensi finansial**: fokus pada kelompok **Debtor** dan status pembayaran, sediakan skema keringanan/angsuran.
+3. **Program remedial semester awal**: jika indikator semester 1/2 (approved rendah) mengarah ke dropout, lakukan kelas tambahan & tutor.
+4. **Audit per Course**: jika ada course dengan dropout tinggi, evaluasi beban kurikulum, kualitas pengajaran, dan sistem penilaian.
+5. **Dashboard monitoring bulanan**: tetapkan target penurunan dropout per semester dan evaluasi progres via dashboard.
 
-## 10. Kesimpulan
-Proyek ini berhasil membangun solusi data science end-to-end yang mencakup analisis data, dashboard, model machine learning, serta prototype aplikasi yang siap digunakan oleh user.
-
----
-
-## 11. Struktur Folder Submission
-```
-submission/
-├── model/
-    ├── model.joblib
-    ├── metrics.json
-    ├── schema.json
-├── notebook.ipynb
-├── notebook.py
-├── app.py
-├── README.md
-├── requirements.txt
-├── metabase.db.mv.db
-├── ekoandriprasetyo-dashboard.png
-```
-
----
-
-**Catatan:**  
-Proyek ini dibuat untuk keperluan pembelajaran dan mengikuti seluruh ketentuan submission Dicoding.
