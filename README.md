@@ -43,12 +43,19 @@ pip install -r requirements.txt
 submission/
 ├── model/
 │   ├── model.joblib
-├───notebook.ipynb
-├───app.py
-├───README.md
-├───ekoandriprasetyo-dashboard.png
-├───metabase.db.mv.db
-└───requirements.txt
+│   ├── metrics.json
+│   ├── schema.json
+├── notebook.ipynb
+├── notebook.py
+├── app.py
+├── batch-inference.csv
+├── data.csv
+├── README.md
+├── ekoandriprasetyo-dashboard.png
+├── metabase.db.mv.db
+├── metabase.db.trace.db
+├── students.db
+└── requirements.txt
 ```
 
 ## Business Dashboard (Metabase)
