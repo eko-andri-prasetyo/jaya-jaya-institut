@@ -1,0 +1,298 @@
+{
+  "target": "Status",
+  "classes": [
+    "Dropout",
+    "Enrolled",
+    "Graduate"
+  ],
+  "features": [
+    {
+      "name": "Marital_status",
+      "dtype": "int64",
+      "type": "numeric",
+      "min": 1.0,
+      "max": 6.0,
+      "median": 1.0
+    },
+    {
+      "name": "Application_mode",
+      "dtype": "int64",
+      "type": "numeric",
+      "min": 1.0,
+      "max": 57.0,
+      "median": 17.0
+    },
+    {
+      "name": "Application_order",
+      "dtype": "int64",
+      "type": "numeric",
+      "min": 0.0,
+      "max": 9.0,
+      "median": 1.0
+    },
+    {
+      "name": "Course",
+      "dtype": "int64",
+      "type": "numeric",
+      "min": 33.0,
+      "max": 9991.0,
+      "median": 9238.0
+    },
+    {
+      "name": "Daytime_evening_attendance",
+      "dtype": "int64",
+      "type": "numeric",
+      "min": 0.0,
+      "max": 1.0,
+      "median": 1.0
+    },
+    {
+      "name": "Previous_qualification",
+      "dtype": "int64",
+      "type": "numeric",
+      "min": 1.0,
+      "max": 43.0,
+      "median": 1.0
+    },
+    {
+      "name": "Previous_qualification_grade",
+      "dtype": "float64",
+      "type": "numeric",
+      "min": 95.0,
+      "max": 190.0,
+      "median": 133.1
+    },
+    {
+      "name": "Nacionality",
+      "dtype": "int64",
+      "type": "numeric",
+      "min": 1.0,
+      "max": 109.0,
+      "median": 1.0
+    },
+    {
+      "name": "Mothers_qualification",
+      "dtype": "int64",
+      "type": "numeric",
+      "min": 1.0,
+      "max": 44.0,
+      "median": 19.0
+    },
+    {
+      "name": "Fathers_qualification",
+      "dtype": "int64",
+      "type": "numeric",
+      "min": 1.0,
+      "max": 44.0,
+      "median": 19.0
+    },
+    {
+      "name": "Mothers_occupation",
+      "dtype": "int64",
+      "type": "numeric",
+      "min": 0.0,
+      "max": 194.0,
+      "median": 5.0
+    },
+    {
+      "name": "Fathers_occupation",
+      "dtype": "int64",
+      "type": "numeric",
+      "min": 0.0,
+      "max": 195.0,
+      "median": 7.0
+    },
+    {
+      "name": "Admission_grade",
+      "dtype": "float64",
+      "type": "numeric",
+      "min": 95.0,
+      "max": 190.0,
+      "median": 126.1
+    },
+    {
+      "name": "Displaced",
+      "dtype": "int64",
+      "type": "numeric",
+      "min": 0.0,
+      "max": 1.0,
+      "median": 1.0
+    },
+    {
+      "name": "Educational_special_needs",
+      "dtype": "int64",
+      "type": "numeric",
+      "min": 0.0,
+      "max": 1.0,
+      "median": 0.0
+    },
+    {
+      "name": "Debtor",
+      "dtype": "int64",
+      "type": "numeric",
+      "min": 0.0,
+      "max": 1.0,
+      "median": 0.0
+    },
+    {
+      "name": "Tuition_fees_up_to_date",
+      "dtype": "int64",
+      "type": "numeric",
+      "min": 0.0,
+      "max": 1.0,
+      "median": 1.0
+    },
+    {
+      "name": "Gender",
+      "dtype": "int64",
+      "type": "numeric",
+      "min": 0.0,
+      "max": 1.0,
+      "median": 0.0
+    },
+    {
+      "name": "Scholarship_holder",
+      "dtype": "int64",
+      "type": "numeric",
+      "min": 0.0,
+      "max": 1.0,
+      "median": 0.0
+    },
+    {
+      "name": "Age_at_enrollment",
+      "dtype": "int64",
+      "type": "numeric",
+      "min": 17.0,
+      "max": 70.0,
+      "median": 20.0
+    },
+    {
+      "name": "International",
+      "dtype": "int64",
+      "type": "numeric",
+      "min": 0.0,
+      "max": 1.0,
+      "median": 0.0
+    },
+    {
+      "name": "Curricular_units_1st_sem_credited",
+      "dtype": "int64",
+      "type": "numeric",
+      "min": 0.0,
+      "max": 20.0,
+      "median": 0.0
+    },
+    {
+      "name": "Curricular_units_1st_sem_enrolled",
+      "dtype": "int64",
+      "type": "numeric",
+      "min": 0.0,
+      "max": 26.0,
+      "median": 6.0
+    },
+    {
+      "name": "Curricular_units_1st_sem_evaluations",
+      "dtype": "int64",
+      "type": "numeric",
+      "min": 0.0,
+      "max": 45.0,
+      "median": 8.0
+    },
+    {
+      "name": "Curricular_units_1st_sem_approved",
+      "dtype": "int64",
+      "type": "numeric",
+      "min": 0.0,
+      "max": 26.0,
+      "median": 5.0
+    },
+    {
+      "name": "Curricular_units_1st_sem_grade",
+      "dtype": "float64",
+      "type": "numeric",
+      "min": 0.0,
+      "max": 18.875,
+      "median": 12.285714285714286
+    },
+    {
+      "name": "Curricular_units_1st_sem_without_evaluations",
+      "dtype": "int64",
+      "type": "numeric",
+      "min": 0.0,
+      "max": 12.0,
+      "median": 0.0
+    },
+    {
+      "name": "Curricular_units_2nd_sem_credited",
+      "dtype": "int64",
+      "type": "numeric",
+      "min": 0.0,
+      "max": 19.0,
+      "median": 0.0
+    },
+    {
+      "name": "Curricular_units_2nd_sem_enrolled",
+      "dtype": "int64",
+      "type": "numeric",
+      "min": 0.0,
+      "max": 23.0,
+      "median": 6.0
+    },
+    {
+      "name": "Curricular_units_2nd_sem_evaluations",
+      "dtype": "int64",
+      "type": "numeric",
+      "min": 0.0,
+      "max": 33.0,
+      "median": 8.0
+    },
+    {
+      "name": "Curricular_units_2nd_sem_approved",
+      "dtype": "int64",
+      "type": "numeric",
+      "min": 0.0,
+      "max": 20.0,
+      "median": 5.0
+    },
+    {
+      "name": "Curricular_units_2nd_sem_grade",
+      "dtype": "float64",
+      "type": "numeric",
+      "min": 0.0,
+      "max": 18.571428571428573,
+      "median": 12.2
+    },
+    {
+      "name": "Curricular_units_2nd_sem_without_evaluations",
+      "dtype": "int64",
+      "type": "numeric",
+      "min": 0.0,
+      "max": 12.0,
+      "median": 0.0
+    },
+    {
+      "name": "Unemployment_rate",
+      "dtype": "float64",
+      "type": "numeric",
+      "min": 7.6,
+      "max": 16.2,
+      "median": 11.1
+    },
+    {
+      "name": "Inflation_rate",
+      "dtype": "float64",
+      "type": "numeric",
+      "min": -0.8,
+      "max": 3.7,
+      "median": 1.4
+    },
+    {
+      "name": "GDP",
+      "dtype": "float64",
+      "type": "numeric",
+      "min": -4.06,
+      "max": 3.51,
+      "median": 0.32
+    }
+  ]
+}
