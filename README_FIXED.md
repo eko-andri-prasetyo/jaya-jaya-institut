@@ -43,15 +43,12 @@ pip install -r requirements.txt
 submission/
 ├── model/
 │   ├── model.joblib
-│   ├── schema.json
-│   └── metrics.json
-├── dashboard/
-│   └── students.db
-├── data/
-│   └── data.csv
-├── notebook.ipynb
-├── app.py
-└── requirements.txt
+├───notebook.ipynb
+├───app.py
+├───README.md
+├───ekoandriprasetyo-dashboard.png
+├───metabase.db.mv.db
+└───requirements.txt
 ```
 
 ## Menjalankan Sistem Machine Learning
