@@ -1,10 +1,5 @@
 # Proyek Akhir: Menyelesaikan Permasalahan Institusi Pendidikan (Jaya Jaya Institut)
 
-**Kelas:** Belajar Penerapan Data Science (Dicoding)  
-**Studi Kasus:** Jaya Jaya Institut  
-**Nama Peserta:** Eko Andri Prasetyo  
-**Username Dicoding:** ekoandriprasetyo  
-
 ## Business Understanding
 Jaya Jaya Institut mengalami tantangan **tingginya angka dropout mahasiswa**. Jika dropout bisa dideteksi lebih awal, institusi dapat melakukan intervensi (akademik/finansial) yang lebih tepat sasaran untuk meningkatkan retensi dan kelulusan.
 
