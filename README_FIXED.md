@@ -91,11 +91,7 @@ cd C:\submission
 
 #### 4. Jalankan Metabase
 ```bash
-docker run -d --name jayainstitut -p 3000:3000 ^
-  -v c:/submission:/metabase.db ^
-  -v c:/submission/students.db:/data/students.db ^
-  -e MB_DB_FILE=/metabase.db/metabase.db ^
-  metabase/metabase:v0.57.3
+docker run -d --name jayainstitut -p 3000:3000 -v c:/submission:/metabase.db -v c:/submission/students.db:/data/students.db -e MB_DB_FILE=/metabase.db/metabase.db metabase/metabase:v0.57.3
 ```
 
 #### 5. Akses dashboard
