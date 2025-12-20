@@ -120,9 +120,19 @@ Cara menjalankan prototype secara lokal:
 streamlit run app.py
 ```
 
-### Format CSV untuk Prediksi Batch
-- Upload file CSV **tanpa kolom target `Status`**.
-- Kolom/fitur harus mengikuti skema yang digunakan saat training (lihat `model/schema.json` bila diperlukan).
+### Prediksi Batch (Upload CSV)
+
+Prototype mendukung prediksi batch menggunakan file CSV.
+Untuk memudahkan pengujian, disediakan contoh file CSV
+yang telah disesuaikan dengan skema fitur model dan **tidak menyertakan
+kolom target (Status)**.
+
+File contoh:
+- `batch_inference_sample.csv`
+
+File ini dapat langsung diunggah ke aplikasi Streamlit pada menu
+**Prediksi Batch (Upload CSV)** untuk menguji proses inference secara batch.
+
 
 ## Conclusion
 Dari hasil analisis data dan pemodelan, dropout pada Jaya Jaya Institut **cenderung dipengaruhi oleh kombinasi** faktor akademik dan finansial, bukan satu faktor tunggal.
